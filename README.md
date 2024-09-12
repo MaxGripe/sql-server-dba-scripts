@@ -6,19 +6,13 @@
 ![GitHub Repo stars](https://img.shields.io/github/stars/MaxGripe/repository-template)
 
 
-# Template Repository
+# SQL Server DBA scripts
 
-This repository serves as a template for starting new projects.
-
-## Features
-
-- Easy setup
-- Customizable configurations
-- Some popular badges already in place
+Collection of SQL Server administration scripts. Only my own scripts are included here.
 
 ## Getting started
 
-To use this template, select it from the **Repository template** dropdown when creating a new repository.
+The file names correspond to specific topics. Just find the appropriate .sql file, and the scripts related to that topic are inside :)
 
 ## License
 
