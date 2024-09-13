@@ -35,4 +35,4 @@ GROUP BY
     indexes.name,
     indexes.is_unique
 ORDER BY 
-    Index_name;
+    6, 7;
