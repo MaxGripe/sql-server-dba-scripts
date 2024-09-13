@@ -2,8 +2,10 @@
 	This script retrieves information about all indexes associated with a specific table in SQL Server,
 	and can be used to identify duplicates
 */
-DECLARE @object_name nvarchar(255)
-SET @object_name = 'my_table_name'
+DECLARE @object_name NVARCHAR(255);
+DECLARE @schema_name NVARCHAR(255);
+SET @object_name = 'my_table_name';
+SET @schema_name = 'dbo';
 
 SELECT
     indexes.name AS Index_name,
@@ -18,6 +20,7 @@ SELECT
 FROM
     sys.indexes
     INNER JOIN sys.objects ON indexes.object_id = objects.object_id
+    INNER JOIN sys.schemas ON objects.schema_id = schemas.schema_id
     LEFT JOIN sys.dm_db_index_usage_stats ON indexes.object_id = dm_db_index_usage_stats.object_id
         AND indexes.index_id = dm_db_index_usage_stats.index_id
     LEFT JOIN sys.index_columns ON indexes.object_id = index_columns.object_id 
@@ -26,12 +29,12 @@ FROM
         AND index_columns.column_id = columns.column_id
 WHERE
     objects.name = @object_name
-
+    AND schemas.name = @schema_name
 GROUP BY 
-    objects.name,
     indexes.name,
     indexes.is_unique,
     dm_db_index_usage_stats.user_seeks,
     dm_db_index_usage_stats.user_scans,
     dm_db_index_usage_stats.user_updates
-ORDER BY 6,7,1
+ORDER BY 
+    Index_name;
