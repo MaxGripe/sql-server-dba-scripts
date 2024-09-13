@@ -36,8 +36,3 @@ GROUP BY
     indexes.is_unique
 ORDER BY 
     Index_name;
-
-    dm_db_index_usage_stats.user_scans,
-    dm_db_index_usage_stats.user_updates
-ORDER BY 
-    Index_name;
