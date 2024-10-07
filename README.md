@@ -1,9 +1,9 @@
 
-![GitHub repo size](https://img.shields.io/github/repo-size/MaxGripe/repository-template)
-![GitHub License](https://img.shields.io/github/license/MaxGripe/repository-template)
-![GitHub Created At](https://img.shields.io/github/created-at/MaxGripe/repository-template)
-![GitHub forks](https://img.shields.io/github/forks/MaxGripe/repository-template)
-![GitHub Repo stars](https://img.shields.io/github/stars/MaxGripe/repository-template)
+![GitHub repo size](https://img.shields.io/github/repo-size/MaxGripe/sql-server-dba-scripts)
+![GitHub License](https://img.shields.io/github/license/MaxGripe/sql-server-dba-scripts)
+![GitHub Created At](https://img.shields.io/github/created-at/MaxGripe/sql-server-dba-scripts)
+![GitHub forks](https://img.shields.io/github/forks/MaxGripe/sql-server-dba-scripts)
+![GitHub Repo stars](https://img.shields.io/github/stars/MaxGripe/sql-server-dba-scripts)
 
 
 # SQL Server DBA scripts
