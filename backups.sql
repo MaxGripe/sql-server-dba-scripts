@@ -16,6 +16,26 @@ WHERE rs.destination_database_name = 'my_database_name'
 ORDER BY rs.restore_date DESC;
 
 /*
+	Monitor ongoing RESTORE progress
+*/
+SELECT 
+    r.percent_complete,
+    r.command,
+    d.name AS database_name,
+    d.state_desc,
+    r.start_time
+FROM 
+    sys.dm_exec_requests r
+CROSS APPLY 
+    sys.dm_exec_sql_text(r.sql_handle) AS t
+JOIN 
+    sys.databases d ON t.text LIKE '%' + d.name + '%' 
+WHERE 
+    r.command = 'RESTORE DATABASE'
+    AND d.state_desc = 'RESTORING';
+
+
+/*
 	History of backups from the specified database.
 	If @DatabaseName is an empty string, it returns backup history for all databases.
 */
