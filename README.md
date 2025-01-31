@@ -8,7 +8,7 @@
 
 # SQL Server DBA scripts
 
-Collection of SQL Server administration scripts. Only my own scripts are included here.
+Collection of SQL Server administration scripts.
 
 ## Getting started
 
