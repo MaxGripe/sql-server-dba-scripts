@@ -4,7 +4,8 @@
 select * from sys.service_message_types
 select * from sys.service_contracts
 select * from sys.service_contract_message_usages
-  
+select * from sys.service_queues
+	
 /*
   Contract details
 */
